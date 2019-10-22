@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zadatak6</title>
+	<style type="text/css">
+		body {
+			padding:40px;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+
+		// Definišite funkciju reverse() koja vraća string u obrnutom redosledu karaktera. Na primer, reverse(“moj primer”) treba da vrati string “remirp jom”.
+
+		var str = "moj primer"; 
+
+		function reverse(text) {
+			 var text1 = "";
+
+				for(var i = 0; i < text.length; i++) {
+					text1 += text[text.length - 1 - i];
+				}
+
+				document.write(text1);
+		}
+		reverse(str);
+
+	</script>
+</body>
+</html>

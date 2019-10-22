@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zadatak5</title>
+	<style type="text/css">
+		body {
+			padding:40px;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+
+		//Definisite funkciju suma() i funkciju proizvod() kojim se sumiraju i množe svi brojevi u nizu brojeva. Na primer, suma([1,2,3,4]) treba da vrati 10, a proizvod([1,2,3,4]) vraća 24.
+
+		var niz1 = [1,2,3,4];
+
+		function vrati(niz) {
+
+			var suma = 0;
+			var proizvod = 1;
+
+			for(var i = 0; i < niz.length; i++) {
+				suma += niz[i];
+				proizvod *= niz[i];
+			}
+
+			document.write("Suma svih brojeva ovog niza je: " + suma + "<br>"); 
+			document.write("Proizvod svih brojeva niza je: " + proizvod);
+
+		}
+		vrati(niz1);
+
+	</script>
+</body>
+</html>

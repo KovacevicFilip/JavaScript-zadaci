@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zadatak4</title>
+	<style type="text/css">
+		body {
+			padding:40px;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+		// Napišite funkciju translate() koja prevodi tekst tako što duplira svaki samoglasnik u tekstu, a između njih umetne slovo “o”. Na primer tekst “ovo je smešno” prevodi u tekst “ovovo joje totesoskoko”.
+		var str = "Danas nam je divan dan !!!";
+
+		function translate(text) {
+
+			var text1 = "";
+			var ispitaj = false;
+			var samoglasnik = ["A", "E", "I", "O", "U"];
+
+				for(var i = 0; i < text.length; i++) {
+					for(var j = 0; j < samoglasnik.length; j++) {
+						if(text[i].toUpperCase() == samoglasnik[j]) ispitaj = true;
+					}
+
+					if(ispitaj) {
+						text1 += text[i] + "O" + text[i];
+						ispitaj = false;
+					}
+
+					else text1 += text[i];
+				}
+
+				document.write(text1);
+		}
+
+		translate(str);
+		
+
+	</script>
+</body>
+</html>

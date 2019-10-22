@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zadatak10</title>
+	<style type="text/css">
+		body {
+			padding:40px;
+			font-size:30px;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+
+		// Napišite funkciju frekSlova() koja uzima string i pravi listu frekvencija slova koja se pojavljuju u stringu. Listu frekvencija predstavite kao JavaScript objekat. Testirajte program sa frekSlova(“abbabcbdbabdbdbabababcbcbab”).
+
+		function flekSlova(text) {
+
+			var slovo= "";
+			var brojac = 0;
+
+			var frekvencije = {};
+				frekvencije.nizSlova = [];
+				frekvencije.brojPonavljanja = [];
+
+				for(var i = 0; i < text.length; i++) {
+					brojac = 0;
+					slovo = text[i]
+
+					for(var j = 0; j < text.length; j++) {
+						
+						if(slovo == text[j]) brojac++;
+						
+					}	
+						if(frekvencije.nizSlova.indexOf(slovo) == -1) {						
+							frekvencije.nizSlova.push(slovo);
+							frekvencije.brojPonavljanja.push(brojac);
+						}
+						
+				}
+
+				console.log(frekvencije);
+				document.write("Broj ponavljanja slova u " + text + " recenici je : " + "<br>");
+				document.write("<hr>");
+
+				for(var i = 0; i < frekvencije.nizSlova.length; i++ ) {
+
+					document.write("Slovo: " + frekvencije.nizSlova[i] + " se ponovilo " + frekvencije.brojPonavljanja[i] + " puta !!!" + "<br>");
+				}
+
+			}
+		flekSlova("abbabcbdbabdbdbabababcbcbab");
+		
+
+
+	</script>
+	
+</body>
+</html>

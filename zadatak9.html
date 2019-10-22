@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zadatak9</title>
+	<style type="text/css">
+		body {
+			padding:40px;
+			font-size:30px;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+
+		// Napišite funkciju filtrirajReci() koja uzima niz reči i jedan ceo broj i, pa vraća niz reči koje su duže od i.
+
+		var nizReci = ["Danas", "nam", "je", "divan", "dan"];
+
+		function filtrirajReci(niz, duzina) {
+
+			var noviNiz = [];
+
+			for(var i = 0; i < niz.length; i++ ) {
+				if(niz[i].length > duzina) noviNiz.push(niz[i]);
+			}
+			for(var i = 0; i < noviNiz.length; i++) {
+				document.write(noviNiz[i] + "<br>");
+			}
+		}
+		
+		filtrirajReci(nizReci, 4);
+
+
+	</script>
+</body>
+</html>

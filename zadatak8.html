@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zadatak8</title>
+	<style type="text/css">
+		body {
+			padding:40px;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+		// Napišite funkciju najduzaRec() koja uzima niz reči i vraća najdužu među njima.
+
+		var nizReci = ["Danas", "nam", "je", "divan", "daaan"];
+
+		function najduzaRec(niz) {
+
+			var duzina = 0;
+			var rec;
+
+			for(var i = 0; i < nizReci.length; i++) {
+
+				if(nizReci[i].length > duzina) {
+					duzina = nizReci[i].length;
+					rec = nizReci[i];
+				}
+
+			}
+
+			document.write("Najduza rec in ovog niza reci je: " + rec);
+		}
+
+		najduzaRec(nizReci);		
+
+	</script>
+</body>
+</html>

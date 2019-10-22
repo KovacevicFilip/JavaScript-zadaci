@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zadatak3</title>
+	<style type="text/css">
+		body {
+			padding:40px;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="text" placeholder="upisi jedno slovo" id="slovo">
+	<button type="button" onclick="daLiJe()">ODREDI !!! </button>
+	<script>
+		// Napišite funkciju koja uzima jedan karakter ( string dužine 1) i vraća true ako je taj karakter samoglasnik, a false ako je suglasnik.
+
+		function daLiJe() {
+
+			var arr1 = document.getElementById("slovo").value;
+
+			var samoglasnici = ["A", "E", "I", "O", "U",];
+			var ispitaj = false;
+
+			if(arr1.length > 1) {
+				alert("Upisi samo jedno slovo !!!");
+				
+			}
+
+			for(var i = 0; i < samoglasnici.length; i++) {
+				if(samoglasnici[i] == arr1.toUpperCase()) ispitaj = true;
+			}
+
+			if(ispitaj) document.write(arr1 + " je samoglasnik !!!");
+
+			else document.write(arr1 + " je suglasnik !!!");
+		}
+		
+
+	</script>
+</body>
+</html>

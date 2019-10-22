@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test za praksu</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+              // prvi zadatak niz brojeva
+              var niz = [23,11,34,44,323,22];
+
+              function brojevi(niz) {
+                var broj1; var broj2; suma = 0;
+
+                for(var i = 0; i < niz.length; i++) {
+                  broj1 = niz[i] % 10;
+                  broj2 = niz[i];
+                  while(broj2 > 1) {
+                    broj2 = broj2 / 10;
+                  }
+                  broj2 = Math.floor(broj2 * 10);
+
+                    if(broj2 == broj1) suma += niz[i];
+                }
+                document.write(suma);
+              }
+              brojevi(niz);
+
+        </script>
+    </body>
+</html>

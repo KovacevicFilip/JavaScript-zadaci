@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+      <title>Matrica test</title>
+      <meta charset="utf-8">
+
+  </head>
+  <body>
+
+      <script>
+        // napisi funkciju koja ce ispisati random matricu
+
+        function napraviMatricu(n) {
+            var matrica = [];
+            var matrica1 = [];
+            var brojac = 1;
+            var brojac2 = 0;
+
+            for(var i = 0; i < n; i++) {
+                matrica.push(matrica1);
+                matrica1 = [];
+                brojac2 = 0;
+                for(var j = 0; j < n; j++) {
+                    if(matrica.length%2 != 0) matrica1.push(brojac);
+                    else matrica1[n - 1 - brojac2] = brojac;
+                    brojac++;
+                    brojac2++;
+            }
+          }
+
+          console.log(matrica);
+          for(var i = 0; i < n; i++) {
+            document.write("<br>")
+            for(var j = 1 ; j < n; j++) {
+                document.write(matrica[j][i] + "&nbsp;");
+            }
+          }
+
+          console.log(matrica);
+        }
+        napraviMatricu(9);
+      </script>
+  </body>
+</html>

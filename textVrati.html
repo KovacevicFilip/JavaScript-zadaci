@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test za praksu</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //NF koja za bilo koji text vraca broj slova, razmaka, interpunkcijskih znakova, i broj karaktera
+            var srt = "Danas je, divan dan.";
+
+            function vrati(text) {
+
+                var znakovi = [",", ".", "!", ":", "?"];
+
+                var brojReci;
+                var brojSlova;
+                var brojZnakova = 0;
+                var brojRazmaka = text.split(" ").length;
+                var brojKaraktera = text.length;
+
+                for(var i = 0; i < text.length; i++) {
+                    for(var j = 0; j < znakovi.length; j++) {
+                        if(text[i] == znakovi[j]) brojZnakova++;
+                    }
+                }
+                brojReci = text.split(" ").length;
+                brojSlova = text.length - brojZnakova - brojRazmaka;
+                console.log("Broj slova je: " + (brojSlova + 1));
+                console.log("Broj razmaka je: " + (brojRazmaka - 1));
+                console.log("Broj reci je: " + brojReci);
+                console.log("Broj karaktera je: " + brojKaraktera);
+                console.log("Broj znakova je: " + brojZnakova);
+            }
+            vrati(srt);
+        </script>
+    </body>
+</html>

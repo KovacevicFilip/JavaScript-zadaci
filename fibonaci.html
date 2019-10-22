@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test fibonaci</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //Zadatak sa fibonacijem
+              var broj1 = 0;
+              var broj2 = 1;
+              var broj3 = broj2 + broj1;
+
+              function fibonaci(n) {
+
+                var niz = [1,1];
+                while(broj3<n) {
+
+                  broj1 = broj2;
+                  broj2 = broj3;
+                  broj3 = broj1 + broj2;
+                  niz.push(broj3);
+                }
+                for(var i = 0; i < niz.length; i++) {
+                  console.log(niz[i]);
+                }
+                console.log(niz);
+                var index = niz.indexOf(broj3);
+                console.log("indexOf fibonacijevog broja u nizu posle " + n + " je " + index);
+            }
+            fibonaci(60);
+        </script>
+    </body>
+</html>
